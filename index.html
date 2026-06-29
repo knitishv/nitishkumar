@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nitish Kumar | Profile</title>
+    <title>Nitish Kumar | Biodata</title>
     
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,12 +34,12 @@
                         }
                     },
                     animation: {
-                        'fade-in': 'fadeIn 0.5s ease-out forwards',
-                        'slide-up': 'slideUp 0.6s ease-out forwards',
+                        'fade-in': 'fadeIn 0.8s ease-out forwards',
+                        'slide-up': 'slideUp 0.8s ease-out forwards',
                     },
                     keyframes: {
                         fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
-                        slideUp: { '0%': { opacity: '0', transform: 'translateY(20px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } }
+                        slideUp: { '0%': { opacity: '0', transform: 'translateY(30px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } }
                     }
                 }
             }
@@ -52,8 +52,6 @@
             background-color: #fafaf9;
             background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239f1239' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
-        .section-content { display: none; }
-        .section-content.active { display: block; }
     </style>
 </head>
 
@@ -64,20 +62,20 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <!-- Brand / Name -->
-                <div class="flex-shrink-0 flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-full bg-brand-700 flex items-center justify-center text-white font-serif font-bold italic">N</div>
+                <a href="#" class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-brand-700 flex items-center justify-center text-white font-serif font-bold italic shadow-md">N</div>
                     <span class="font-serif font-bold text-xl text-stone-100 tracking-wide">Nitish Kumar</span>
-                </div>
+                </a>
                 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-1">
-                    <button id="nav-personal" onclick="showSection('personal')" class="nav-btn active px-4 py-2 rounded-lg text-sm font-medium transition-all text-white bg-brand-700 shadow-md">Overview</button>
-                    <button id="nav-family" onclick="showSection('family')" class="nav-btn px-4 py-2 rounded-lg text-sm font-medium transition-all text-stone-300 hover:text-white hover:bg-stone-800">Family</button>
-                    <button id="nav-career" onclick="showSection('career')" class="nav-btn px-4 py-2 rounded-lg text-sm font-medium transition-all text-stone-300 hover:text-white hover:bg-stone-800">Education & Career</button>
-                    <button id="nav-hobbies" onclick="showSection('hobbies')" class="nav-btn px-4 py-2 rounded-lg text-sm font-medium transition-all text-stone-300 hover:text-white hover:bg-stone-800">Lifestyle</button>
+                <div class="hidden md:flex space-x-2">
+                    <a href="#personal" class="px-4 py-2 rounded-lg text-sm font-medium transition-all text-stone-300 hover:text-white hover:bg-stone-800 hover:shadow-md">Overview</a>
+                    <a href="#family" class="px-4 py-2 rounded-lg text-sm font-medium transition-all text-stone-300 hover:text-white hover:bg-stone-800 hover:shadow-md">Family</a>
+                    <a href="#career" class="px-4 py-2 rounded-lg text-sm font-medium transition-all text-stone-300 hover:text-white hover:bg-stone-800 hover:shadow-md">Education & Career</a>
+                    <a href="#hobbies" class="px-4 py-2 rounded-lg text-sm font-medium transition-all text-stone-300 hover:text-white hover:bg-stone-800 hover:shadow-md">Lifestyle</a>
                 </div>
 
-                <!-- Mobile Hamburger Button (3 Bars) -->
+                <!-- Mobile Hamburger Button -->
                 <div class="md:hidden flex items-center">
                     <button onclick="toggleMobileMenu()" class="text-stone-300 hover:text-white focus:outline-none p-2">
                         <i class="fas fa-bars text-2xl"></i>
@@ -89,111 +87,111 @@
         <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="hidden md:hidden bg-stone-900 border-t border-stone-800 absolute w-full shadow-2xl">
             <div class="px-4 pt-2 pb-4 space-y-1">
-                <button id="mob-nav-personal" onclick="showSection('personal')" class="mob-nav-btn active block w-full text-left px-4 py-3 rounded-md text-base font-medium text-white bg-brand-700">Personal Overview</button>
-                <button id="mob-nav-family" onclick="showSection('family')" class="mob-nav-btn block w-full text-left px-4 py-3 rounded-md text-base font-medium text-stone-300 hover:text-white hover:bg-stone-800">Family Background</button>
-                <button id="mob-nav-career" onclick="showSection('career')" class="mob-nav-btn block w-full text-left px-4 py-3 rounded-md text-base font-medium text-stone-300 hover:text-white hover:bg-stone-800">Education & Career</button>
-                <button id="mob-nav-hobbies" onclick="showSection('hobbies')" class="mob-nav-btn block w-full text-left px-4 py-3 rounded-md text-base font-medium text-stone-300 hover:text-white hover:bg-stone-800">Lifestyle & Hobbies</button>
+                <a href="#personal" onclick="toggleMobileMenu()" class="block w-full text-left px-4 py-3 rounded-md text-base font-medium text-stone-300 hover:text-white hover:bg-stone-800">Personal Overview</a>
+                <a href="#family" onclick="toggleMobileMenu()" class="block w-full text-left px-4 py-3 rounded-md text-base font-medium text-stone-300 hover:text-white hover:bg-stone-800">Family Background</a>
+                <a href="#career" onclick="toggleMobileMenu()" class="block w-full text-left px-4 py-3 rounded-md text-base font-medium text-stone-300 hover:text-white hover:bg-stone-800">Education & Career</a>
+                <a href="#hobbies" onclick="toggleMobileMenu()" class="block w-full text-left px-4 py-3 rounded-md text-base font-medium text-stone-300 hover:text-white hover:bg-stone-800">Lifestyle & Hobbies</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Header Profile Area -->
-    <header class="pt-28 pb-10 px-5 text-center flex flex-col items-center bg-white border-b border-stone-200 shadow-sm relative overflow-hidden">
+    <header class="pt-28 pb-12 px-5 text-center flex flex-col items-center bg-white border-b border-stone-200 shadow-sm relative overflow-hidden">
         <div class="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-brand-900/5 to-transparent pointer-events-none"></div>
         
         <div class="relative z-10 animate-fade-in">
-            <img src="InShot_20260603_155604969.jpg" alt="Nitish Kumar" class="w-36 h-36 rounded-full border-4 border-white shadow-xl object-cover bg-stone-100 transition-transform duration-500 hover:scale-105">
+            <img src="InShot_20260603_155604969.jpg" alt="Nitish Kumar" class="w-40 h-40 rounded-full border-4 border-white shadow-xl object-cover bg-stone-100 transition-transform duration-500 hover:scale-105">
         </div>
         
-        <h1 class="text-3xl md:text-4xl font-serif font-bold mt-5 tracking-tight text-stone-900 animate-slide-up">Nitish Kumar</h1>
-        <p class="text-brand-600 font-medium mt-2 bg-brand-50 px-4 py-1.5 rounded-full border border-brand-100 text-sm animate-slide-up" style="animation-delay: 0.1s;">
-            Executive @ BPCL, Mumbai
+        <h1 class="text-3xl md:text-5xl font-serif font-bold mt-6 tracking-tight text-stone-900 animate-slide-up">Nitish Kumar</h1>
+        <p class="text-brand-700 font-medium mt-3 bg-brand-50 px-5 py-2 rounded-full border border-brand-100 text-sm animate-slide-up shadow-sm" style="animation-delay: 0.1s;">
+            <i class="fas fa-briefcase mr-2"></i>Executive @ BPCL, Mumbai
         </p>
 
         <!-- Social & Resume Links -->
-        <div class="flex flex-col items-center gap-5 mt-6 animate-slide-up" style="animation-delay: 0.2s;">
+        <div class="flex flex-col items-center gap-6 mt-8 animate-slide-up" style="animation-delay: 0.2s;">
             <div class="flex gap-4">
-                <a href="https://www.linkedin.com/in/knitishv/" target="_blank" class="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-600 hover:bg-brand-600 hover:text-white transition-all shadow-sm hover:shadow-md">
-                    <i class="fab fa-linkedin-in"></i>
+                <a href="https://www.linkedin.com/in/knitishv/" target="_blank" aria-label="LinkedIn" class="w-11 h-11 rounded-full bg-stone-100 flex items-center justify-center text-stone-600 hover:bg-brand-600 hover:text-white transition-all shadow-sm hover:shadow-md hover:-translate-y-1">
+                    <i class="fab fa-linkedin-in text-lg"></i>
                 </a>
-                <a href="https://www.facebook.com/knitish.nitt/" target="_blank" class="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-600 hover:bg-brand-600 hover:text-white transition-all shadow-sm hover:shadow-md">
-                    <i class="fab fa-facebook-f"></i>
+                <a href="https://www.facebook.com/knitish.nitt/" target="_blank" aria-label="Facebook" class="w-11 h-11 rounded-full bg-stone-100 flex items-center justify-center text-stone-600 hover:bg-brand-600 hover:text-white transition-all shadow-sm hover:shadow-md hover:-translate-y-1">
+                    <i class="fab fa-facebook-f text-lg"></i>
                 </a>
-                <a href="https://www.instagram.com/knitvish/" target="_blank" class="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-600 hover:bg-brand-600 hover:text-white transition-all shadow-sm hover:shadow-md">
-                    <i class="fab fa-instagram"></i>
+                <a href="https://www.instagram.com/knitvish/" target="_blank" aria-label="Instagram" class="w-11 h-11 rounded-full bg-stone-100 flex items-center justify-center text-stone-600 hover:bg-brand-600 hover:text-white transition-all shadow-sm hover:shadow-md hover:-translate-y-1">
+                    <i class="fab fa-instagram text-lg"></i>
                 </a>
-                <a href="mailto:knitishv@gmail.com" class="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-600 hover:bg-brand-600 hover:text-white transition-all shadow-sm hover:shadow-md">
-                    <i class="fas fa-envelope"></i>
+                <a href="mailto:knitishv@gmail.com" aria-label="Email" class="w-11 h-11 rounded-full bg-stone-100 flex items-center justify-center text-stone-600 hover:bg-brand-600 hover:text-white transition-all shadow-sm hover:shadow-md hover:-translate-y-1">
+                    <i class="fas fa-envelope text-lg"></i>
                 </a>
             </div>
             
             <!-- Download Resume Button -->
-            <a href="102120049_Nitish Kumar.pdf" target="_blank" class="inline-flex items-center gap-2 px-6 py-2.5 bg-brand-700 text-white rounded-full font-medium text-sm hover:bg-brand-800 transition-colors shadow-lg shadow-brand-900/20 border border-brand-600">
-                <i class="fas fa-file-pdf"></i> Download Resume
+            <a href="102120049_Nitish Kumar.pdf" target="_blank" class="inline-flex items-center gap-2 px-7 py-3 bg-brand-700 text-white rounded-full font-medium text-sm hover:bg-brand-800 hover:shadow-xl transition-all shadow-lg shadow-brand-900/20 border border-brand-600 hover:-translate-y-0.5">
+                <i class="fas fa-file-pdf"></i> Download Resume (PDF)
             </a>
         </div>
     </header>
 
     <!-- Main Dynamic Content -->
-    <main class="flex-1 w-full max-w-5xl mx-auto p-5 sm:p-8 lg:p-12 mb-10">
+    <main class="flex-1 w-full max-w-5xl mx-auto p-5 sm:p-8 lg:p-12 mb-10 space-y-24">
         
         <!-- 1. PERSONAL OVERVIEW SECTION -->
-        <section id="personal" class="section-content active animate-fade-in">
+        <section id="personal" class="scroll-mt-24">
             <div class="mb-10 text-center">
                 <h2 class="text-3xl font-serif font-bold text-stone-900 mb-4">Personal Overview</h2>
                 <div class="w-16 h-1 bg-brand-600 rounded-full mx-auto mb-6"></div>
-                <p class="text-stone-600 leading-relaxed text-lg font-medium max-w-3xl mx-auto">
-                    I am a Chemical Engineering graduate from NIT Trichy and currently working as an Executive at BPCL Mumbai Refinery. I value honesty, responsibility, and strong family relationships, and strive to maintain a balanced approach towards both my professional and personal life. My work has taught me discipline, teamwork, and the importance of continuous learning. Outside of work, I enjoy spending time with family and friends, exploring new places, learning about different cultures and languages, and maintaining a healthy lifestyle.
+                <p class="text-stone-600 leading-relaxed text-lg font-medium max-w-3xl mx-auto bg-white p-6 sm:p-8 rounded-2xl border border-stone-200 shadow-sm">
+                    I am a Chemical Engineering graduate from NIT Trichy and currently working as an Assistant Executive at BPCL Mumbai Refinery. I value honesty, responsibility, and strong family relationships, and strive to maintain a balanced approach towards both my professional and personal life. My work has taught me discipline, teamwork, and the importance of continuous learning. Outside of work, I enjoy spending time with family and friends, exploring new places, learning about different cultures and languages, and maintaining a healthy lifestyle.
                 </p>
             </div>
 
             <!-- Basic Details -->
-            <div class="bg-white border border-stone-200 rounded-2xl p-6 sm:p-8 shadow-sm mb-10 relative overflow-hidden">
-                <div class="absolute -right-10 -top-10 text-brand-50 opacity-50">
+            <div class="bg-white border border-stone-200 rounded-2xl p-6 sm:p-8 shadow-sm mb-10 relative overflow-hidden group hover:border-brand-300 transition-colors">
+                <div class="absolute -right-10 -top-10 text-brand-50 opacity-50 group-hover:scale-110 transition-transform duration-700">
                     <i class="fas fa-om text-[150px]"></i>
                 </div>
                 
-                <h3 class="text-xl font-serif font-bold text-stone-800 mb-6 flex items-center gap-2 relative z-10">
-                    <i class="fas fa-info-circle text-brand-600"></i> Basic Details
+                <h3 class="text-xl font-serif font-bold text-stone-800 mb-6 flex items-center gap-3 relative z-10">
+                    <div class="w-8 h-8 rounded-full bg-brand-50 flex items-center justify-center text-brand-600"><i class="fas fa-info"></i></div> Basic Details
                 </h3>
                 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-8 relative z-10">
-                    <div><p class="text-sm text-stone-500 mb-1">Date of Birth</p><p class="font-semibold text-stone-900">28th June, 2002</p></div>
-                    <div><p class="text-sm text-stone-500 mb-1">Gotra</p><p class="font-semibold text-stone-900">Shandilya</p></div>
-                    <div><p class="text-sm text-stone-500 mb-1">Height</p><p class="font-semibold text-stone-900">5'5"</p></div>
-                    <div><p class="text-sm text-stone-500 mb-1">Religion / Caste</p><p class="font-semibold text-stone-900">Hindu</p></div>
-                    <div><p class="text-sm text-stone-500 mb-1">Native Place</p><p class="font-semibold text-stone-900">Govindpur, Nawada, Bihar</p></div>
-                    <div><p class="text-sm text-stone-500 mb-1">Current Base</p><p class="font-semibold text-stone-900">Chembur, Mumbai</p></div>
+                    <div><p class="text-sm text-stone-500 mb-1">Date of Birth</p><p class="font-semibold text-stone-900 text-lg">28th June, 2002</p></div>
+                    <div><p class="text-sm text-stone-500 mb-1">Gotra</p><p class="font-semibold text-stone-900 text-lg">Shandilya</p></div>
+                    <div><p class="text-sm text-stone-500 mb-1">Height</p><p class="font-semibold text-stone-900 text-lg">5'5"</p></div>
+                    <div><p class="text-sm text-stone-500 mb-1">Religion / Caste</p><p class="font-semibold text-stone-900 text-lg">Hindu</p></div>
+                    <div><p class="text-sm text-stone-500 mb-1">Native Place</p><p class="font-semibold text-stone-900 text-lg">Govindpur, Nawada</p></div>
+                    <div><p class="text-sm text-stone-500 mb-1">Current Base</p><p class="font-semibold text-stone-900 text-lg">Chembur, Mumbai</p></div>
                 </div>
             </div>
 
             <!-- Contact & Addresses -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Contact -->
-                <div class="bg-white border border-stone-200 rounded-2xl p-6 shadow-sm hover:border-brand-200 transition-colors">
-                    <h4 class="font-serif font-bold text-lg text-stone-900 mb-4 border-b border-stone-100 pb-3">Contact Information</h4>
+                <div class="bg-white border border-stone-200 rounded-2xl p-6 shadow-sm hover:border-brand-200 transition-all hover:shadow-md">
+                    <h4 class="font-serif font-bold text-lg text-stone-900 mb-4 border-b border-stone-100 pb-3 flex items-center gap-2"><i class="fas fa-address-book text-brand-600"></i> Contact Information</h4>
                     <ul class="space-y-4">
                         <li class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center shrink-0"><i class="fas fa-phone-alt text-sm"></i></div>
+                            <div class="w-10 h-10 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center shrink-0"><i class="fas fa-phone-alt text-sm"></i></div>
                             <div><p class="text-xs text-stone-500">Mobile Number</p><p class="font-medium text-stone-800">+91 7542887075</p></div>
                         </li>
                         <li class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center shrink-0"><i class="fas fa-envelope text-sm"></i></div>
+                            <div class="w-10 h-10 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center shrink-0"><i class="fas fa-envelope text-sm"></i></div>
                             <div><p class="text-xs text-stone-500">Email Address</p><p class="font-medium text-stone-800">knitishv@gmail.com</p></div>
                         </li>
                     </ul>
                 </div>
 
                 <!-- Address -->
-                <div class="bg-white border border-stone-200 rounded-2xl p-6 shadow-sm hover:border-brand-200 transition-colors">
-                    <h4 class="font-serif font-bold text-lg text-stone-900 mb-4 border-b border-stone-100 pb-3">Residential Details</h4>
+                <div class="bg-white border border-stone-200 rounded-2xl p-6 shadow-sm hover:border-brand-200 transition-all hover:shadow-md">
+                    <h4 class="font-serif font-bold text-lg text-stone-900 mb-4 border-b border-stone-100 pb-3 flex items-center gap-2"><i class="fas fa-map-marked-alt text-brand-600"></i> Residential Details</h4>
                     <ul class="space-y-4">
                         <li class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-full bg-stone-100 text-stone-600 flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-map-marker-alt text-sm"></i></div>
+                            <div class="w-10 h-10 rounded-full bg-stone-100 text-stone-600 flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-map-marker-alt text-sm"></i></div>
                             <div><p class="text-xs text-stone-500">Current Residence</p><p class="font-medium text-stone-800 text-sm mt-0.5">Chembur, Mumbai, Maharashtra, 400074</p></div>
                         </li>
                         <li class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-full bg-stone-100 text-stone-600 flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-home text-sm"></i></div>
+                            <div class="w-10 h-10 rounded-full bg-stone-100 text-stone-600 flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-home text-sm"></i></div>
                             <div><p class="text-xs text-stone-500">Permanent / Native</p><p class="font-medium text-stone-800 text-sm mt-0.5">Govindpur, Nawada, Bihar</p></div>
                         </li>
                     </ul>
@@ -202,8 +200,8 @@
         </section>
 
         <!-- 2. FAMILY BACKGROUND SECTION -->
-        <section id="family" class="section-content">
-            <div class="mb-10 text-center animate-slide-up">
+        <section id="family" class="scroll-mt-24 pt-8 border-t border-stone-200">
+            <div class="mb-10 text-center">
                 <h2 class="text-3xl font-serif font-bold text-stone-900 mb-4">Family Background</h2>
                 <div class="w-16 h-1 bg-brand-600 rounded-full mx-auto mb-6"></div>
                 <p class="text-stone-600 text-lg max-w-2xl mx-auto">
@@ -211,22 +209,22 @@
                 </p>
             </div>
 
-            <div class="space-y-6 animate-slide-up" style="animation-delay: 0.1s;">
+            <div class="space-y-6">
                 <!-- Parents Section -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-white border-t-4 border-brand-500 rounded-b-2xl p-6 shadow-sm flex items-start gap-5">
-                        <div class="w-14 h-14 bg-brand-50 rounded-full flex items-center justify-center text-brand-600 shrink-0 border border-brand-100"><i class="fas fa-user-tie text-xl"></i></div>
+                    <div class="bg-white border-t-4 border-brand-500 rounded-b-2xl p-6 shadow-sm flex items-start gap-5 hover:shadow-md transition-shadow">
+                        <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center text-brand-600 shrink-0 border border-brand-100"><i class="fas fa-user-tie text-2xl"></i></div>
                         <div>
-                            <h3 class="text-sm text-brand-600 font-bold uppercase tracking-wider mb-1">Father</h3>
+                            <h3 class="text-xs text-brand-600 font-bold uppercase tracking-wider mb-1">Father</h3>
                             <p class="text-xl font-serif font-bold text-stone-900 mb-1.5">Mr. Vinod Kumar</p>
                             <p class="text-stone-600 text-sm leading-relaxed">Businessman. Currently engaged in RCM (Direct Selling).</p>
                         </div>
                     </div>
 
-                    <div class="bg-white border-t-4 border-brand-400 rounded-b-2xl p-6 shadow-sm flex items-start gap-5">
-                        <div class="w-14 h-14 bg-brand-50 rounded-full flex items-center justify-center text-brand-600 shrink-0 border border-brand-100"><i class="fas fa-female text-2xl"></i></div>
+                    <div class="bg-white border-t-4 border-brand-400 rounded-b-2xl p-6 shadow-sm flex items-start gap-5 hover:shadow-md transition-shadow">
+                        <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center text-brand-600 shrink-0 border border-brand-100"><i class="fas fa-female text-3xl"></i></div>
                         <div>
-                            <h3 class="text-sm text-brand-600 font-bold uppercase tracking-wider mb-1">Mother</h3>
+                            <h3 class="text-xs text-brand-600 font-bold uppercase tracking-wider mb-1">Mother</h3>
                             <p class="text-xl font-serif font-bold text-stone-900 mb-1.5">Mrs. Sangita Devi</p>
                             <p class="text-stone-600 text-sm leading-relaxed">Homemaker. The caring foundation of our family.</p>
                         </div>
@@ -234,30 +232,30 @@
                 </div>
 
                 <!-- Siblings Section -->
-                <h3 class="text-2xl font-serif font-bold text-stone-800 mt-10 mb-6 flex items-center gap-3">
+                <h3 class="text-2xl font-serif font-bold text-stone-800 mt-12 mb-6 flex items-center justify-center gap-3">
                     <i class="fas fa-user-friends text-brand-500 text-xl"></i> Siblings
                 </h3>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-white border border-stone-200 rounded-2xl p-6 shadow-sm hover:border-brand-200 transition-colors">
-                        <div class="flex items-center gap-3 mb-3">
-                            <div class="w-10 h-10 bg-stone-100 rounded-full flex items-center justify-center text-stone-600"><i class="fas fa-star text-sm"></i></div>
+                    <div class="bg-white border border-stone-200 rounded-2xl p-6 shadow-sm hover:border-brand-300 transition-colors">
+                        <div class="flex items-center gap-4 mb-4 border-b border-stone-100 pb-3">
+                            <div class="w-12 h-12 bg-stone-100 rounded-full flex items-center justify-center text-stone-600"><i class="fas fa-star text-lg"></i></div>
                             <h4 class="font-bold text-lg text-stone-900">Younger Sister</h4>
                         </div>
-                        <ul class="space-y-2 text-sm text-stone-600 ml-13 pl-13">
-                            <li class="flex items-center gap-2"><i class="fas fa-graduation-cap text-stone-400 w-4"></i> Graduation Completed</li>
-                            <li class="flex items-center gap-2"><i class="fas fa-music text-stone-400 w-4"></i> Passionate about dancing</li>
+                        <ul class="space-y-3 text-sm text-stone-600">
+                            <li class="flex items-center gap-3"><div class="w-6 text-center"><i class="fas fa-graduation-cap text-stone-400"></i></div> Graduation Completed</li>
+                            <li class="flex items-center gap-3"><div class="w-6 text-center"><i class="fas fa-music text-stone-400"></i></div> Passionate about dancing</li>
                         </ul>
                     </div>
 
-                    <div class="bg-white border border-stone-200 rounded-2xl p-6 shadow-sm hover:border-brand-200 transition-colors">
-                        <div class="flex items-center gap-3 mb-3">
-                            <div class="w-10 h-10 bg-stone-100 rounded-full flex items-center justify-center text-stone-600"><i class="fas fa-palette text-sm"></i></div>
+                    <div class="bg-white border border-stone-200 rounded-2xl p-6 shadow-sm hover:border-brand-300 transition-colors">
+                        <div class="flex items-center gap-4 mb-4 border-b border-stone-100 pb-3">
+                            <div class="w-12 h-12 bg-stone-100 rounded-full flex items-center justify-center text-stone-600"><i class="fas fa-palette text-lg"></i></div>
                             <h4 class="font-bold text-lg text-stone-900">Younger Brother</h4>
                         </div>
-                        <ul class="space-y-2 text-sm text-stone-600 ml-13 pl-13">
-                            <li class="flex items-center gap-2"><i class="fas fa-book-reader text-stone-400 w-4"></i> Graduation in progress</li>
-                            <li class="flex items-center gap-2"><i class="fas fa-paint-brush text-stone-400 w-4"></i> Talented artist</li>
+                        <ul class="space-y-3 text-sm text-stone-600">
+                            <li class="flex items-center gap-3"><div class="w-6 text-center"><i class="fas fa-book-reader text-stone-400"></i></div> Graduation in progress</li>
+                            <li class="flex items-center gap-3"><div class="w-6 text-center"><i class="fas fa-paint-brush text-stone-400"></i></div> Talented artist</li>
                         </ul>
                     </div>
                 </div>
@@ -265,20 +263,20 @@
         </section>
 
         <!-- 3. CAREER & EDUCATION SECTION -->
-        <section id="career" class="section-content">
-            <div class="mb-10 text-center animate-slide-up">
+        <section id="career" class="scroll-mt-24 pt-8 border-t border-stone-200">
+            <div class="mb-10 text-center">
                 <h2 class="text-3xl font-serif font-bold text-stone-900 mb-4">Education & Career</h2>
                 <div class="w-16 h-1 bg-brand-600 rounded-full mx-auto mb-8"></div>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 animate-slide-up" style="animation-delay: 0.1s;">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <!-- Career Column -->
                 <div class="space-y-6">
                     <h3 class="text-xl font-serif font-bold text-stone-900 mb-6 flex items-center gap-2 border-b border-stone-200 pb-2">
                         <i class="fas fa-briefcase text-brand-600"></i> Professional Journey
                     </h3>
                     
-                    <div class="bg-white border border-stone-200 rounded-2xl p-6 shadow-sm relative overflow-hidden">
+                    <div class="bg-white border border-stone-200 rounded-2xl p-6 shadow-sm relative overflow-hidden hover:shadow-md transition-shadow">
                         <div class="absolute top-0 left-0 w-1.5 h-full bg-brand-600"></div>
                         <div class="flex justify-between items-start mb-2">
                             <div>
@@ -287,18 +285,18 @@
                             </div>
                             <span class="text-xs font-bold text-stone-500 bg-stone-100 px-2 py-1 rounded">Jun 2024 – Present</span>
                         </div>
-                        <p class="text-stone-500 text-sm font-medium mb-4"><i class="fas fa-map-marker-alt mr-1"></i> Mumbai, Maharashtra</p>
+                        <p class="text-stone-500 text-sm font-medium mb-4"><i class="fas fa-map-marker-alt mr-1 text-brand-400"></i> Mumbai, Maharashtra</p>
                         <p class="text-stone-600 text-sm leading-relaxed">
-                            Currently working as an Executive in the Catalytic Cracking Unit (CCU) at BPCL Mumbai Refinery. Responsible for ensuring safe and efficient unit operations, process parameter monitoring, equipment performance, and maintaining high product quality standards.
+                            Currently working as an Assistant Executive in the Catalytic Cracking Unit (CCU) at BPCL Mumbai Refinery. Responsible for ensuring safe and efficient unit operations, process parameter monitoring, equipment performance, and maintaining high product quality standards.
                         </p>
                     </div>
                     
                     <div class="bg-white border border-stone-200 rounded-2xl p-6 shadow-sm">
                         <h4 class="font-bold text-stone-900 mb-4">Past Experiences</h4>
                         <ul class="space-y-4">
-                            <li class="flex gap-4"><div class="w-2 h-2 rounded-full bg-stone-300 mt-2"></div><p class="font-medium text-stone-800 text-sm">Process Engineer Intern <span class="text-stone-400 font-normal ml-1">| ONGC Mehsana</span></p></li>
-                            <li class="flex gap-4"><div class="w-2 h-2 rounded-full bg-stone-300 mt-2"></div><p class="font-medium text-stone-800 text-sm">Quality Assurance Intern <span class="text-stone-400 font-normal ml-1">| Toolfab Engg.</span></p></li>
-                            <li class="flex gap-4"><div class="w-2 h-2 rounded-full bg-stone-300 mt-2"></div><p class="font-medium text-stone-800 text-sm">Industrial Intern <span class="text-stone-400 font-normal ml-1">| Brakes India (TVS)</span></p></li>
+                            <li class="flex gap-4"><div class="w-2 h-2 rounded-full bg-brand-300 mt-1.5 shrink-0"></div><p class="font-medium text-stone-800 text-sm">Process Engineer Intern <span class="text-stone-400 font-normal ml-1">| ONGC Mehsana</span></p></li>
+                            <li class="flex gap-4"><div class="w-2 h-2 rounded-full bg-brand-300 mt-1.5 shrink-0"></div><p class="font-medium text-stone-800 text-sm">Quality Assurance Intern <span class="text-stone-400 font-normal ml-1">| Toolfab Engg.</span></p></li>
+                            <li class="flex gap-4"><div class="w-2 h-2 rounded-full bg-brand-300 mt-1.5 shrink-0"></div><p class="font-medium text-stone-800 text-sm">Industrial Intern <span class="text-stone-400 font-normal ml-1">| Brakes India (TVS)</span></p></li>
                         </ul>
                     </div>
                 </div>
@@ -309,9 +307,9 @@
                         <i class="fas fa-graduation-cap text-brand-600"></i> Academic Background
                     </h3>
                     
-                    <div class="bg-white border border-stone-200 rounded-2xl p-6 shadow-sm">
+                    <div class="bg-white border border-stone-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
                         <div class="flex items-start gap-4 mb-4">
-                            <div class="w-12 h-12 bg-stone-50 rounded-xl flex items-center justify-center text-stone-700 shrink-0 border border-stone-100"><i class="fas fa-university text-xl"></i></div>
+                            <div class="w-12 h-12 bg-stone-50 rounded-xl flex items-center justify-center text-stone-700 shrink-0 border border-stone-200"><i class="fas fa-university text-xl"></i></div>
                             <div>
                                 <h4 class="font-bold text-stone-900">B.Tech in Chemical Engineering</h4>
                                 <p class="text-sm font-medium text-stone-600">National Institute of Technology (NIT), Trichy</p>
@@ -319,7 +317,7 @@
                             </div>
                         </div>
                         <div class="bg-amber-50 border border-amber-100 rounded-lg p-3 text-sm flex items-start gap-2">
-                            <i class="fas fa-award text-amber-500 mt-0.5"></i>
+                            <i class="fas fa-award text-amber-500 mt-0.5 shrink-0"></i>
                             <span class="text-stone-700">Awarded the <strong>RECAL Scholarship</strong> by NIT Trichy Alumni.</span>
                         </div>
                     </div>
@@ -330,13 +328,15 @@
                         <p class="text-sm text-stone-600 mb-4">I have a keen intellect and a passion for scientific research, with two significant articles published in reputed international journals:</p>
                         
                         <ul class="space-y-4">
-                            <li class="text-sm text-stone-700 border-l-2 border-brand-300 pl-3">
+                            <li class="text-sm text-stone-700 border-l-2 border-brand-300 pl-4 relative">
+                                <div class="absolute -left-[5px] top-1.5 w-2 h-2 rounded-full bg-brand-500"></div>
                                 <a href="https://www.sciencedirect.com/science/article/pii/S1876107025006467?dgcid=coauthor" target="_blank" class="font-semibold block mb-1 text-stone-800 hover:text-brand-600 transition-colors">
                                     Journal of the Taiwan Institute of Chemical Engineers <i class="fas fa-external-link-alt text-[10px] ml-1 text-stone-400"></i>
                                 </a>
                                 Research on nanofiltration and photocatalysis using engineered membranes.
                             </li>
-                            <li class="text-sm text-stone-700 border-l-2 border-brand-300 pl-3">
+                            <li class="text-sm text-stone-700 border-l-2 border-brand-300 pl-4 relative">
+                                <div class="absolute -left-[5px] top-1.5 w-2 h-2 rounded-full bg-brand-500"></div>
                                 <a href="https://doi.org/10.1002/jctb.70128" target="_blank" class="font-semibold block mb-1 text-stone-800 hover:text-brand-600 transition-colors">
                                     Journal of Chemical Technology & Biotechnology <i class="fas fa-external-link-alt text-[10px] ml-1 text-stone-400"></i>
                                 </a>
@@ -349,8 +349,8 @@
         </section>
 
         <!-- 4. LIFESTYLE & HOBBIES SECTION -->
-        <section id="hobbies" class="section-content">
-            <div class="mb-10 text-center animate-slide-up">
+        <section id="hobbies" class="scroll-mt-24 pt-8 border-t border-stone-200">
+            <div class="mb-10 text-center">
                 <h2 class="text-3xl font-serif font-bold text-stone-900 mb-4">Lifestyle & Interests</h2>
                 <div class="w-16 h-1 bg-brand-600 rounded-full mx-auto mb-6"></div>
                 <p class="text-stone-600 max-w-2xl mx-auto text-lg">
@@ -358,31 +358,33 @@
                 </p>
             </div>
 
-            <div class="animate-slide-up" style="animation-delay: 0.1s;">
+            <div>
                 <h3 class="text-xl font-serif font-bold text-stone-800 mb-6 border-b border-stone-200 pb-2">My Hobbies</h3>
                 
                 <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-12">
-                    <div class="bg-white rounded-2xl p-5 border border-stone-100 shadow-sm flex flex-col items-center text-center hover:border-brand-200 transition-colors"><i class="fas fa-microphone-alt text-2xl text-brand-500 mb-3"></i><span class="font-medium text-stone-800 text-sm">Singing</span></div>
-                    <div class="bg-white rounded-2xl p-5 border border-stone-100 shadow-sm flex flex-col items-center text-center hover:border-brand-200 transition-colors"><i class="fas fa-drum text-2xl text-brand-500 mb-3"></i><span class="font-medium text-stone-800 text-sm">Playing Tabla</span></div>
-                    <div class="bg-white rounded-2xl p-5 border border-stone-100 shadow-sm flex flex-col items-center text-center hover:border-brand-200 transition-colors"><i class="fas fa-book-open text-2xl text-stone-500 mb-3"></i><span class="font-medium text-stone-800 text-sm">Reading</span></div>
-                    <div class="bg-white rounded-2xl p-5 border border-stone-100 shadow-sm flex flex-col items-center text-center hover:border-brand-200 transition-colors"><i class="fas fa-pen-fancy text-2xl text-stone-500 mb-3"></i><span class="font-medium text-stone-800 text-sm">Writing Articles</span></div>
-                    <div class="bg-white rounded-2xl p-5 border border-stone-100 shadow-sm flex flex-col items-center text-center hover:border-brand-200 transition-colors"><i class="fas fa-language text-2xl text-stone-500 mb-3"></i><span class="font-medium text-stone-800 text-sm">New Languages</span></div>
-                    <div class="bg-white rounded-2xl p-5 border border-stone-100 shadow-sm flex flex-col items-center text-center hover:border-brand-200 transition-colors"><i class="fas fa-camera-retro text-2xl text-stone-500 mb-3"></i><span class="font-medium text-stone-800 text-sm">Photography</span></div>
-                    <div class="bg-white rounded-2xl p-5 border border-stone-100 shadow-sm flex flex-col items-center text-center hover:border-brand-200 transition-colors"><i class="fas fa-palette text-2xl text-stone-500 mb-3"></i><span class="font-medium text-stone-800 text-sm">Sketching</span></div>
-                    <div class="bg-white rounded-2xl p-5 border border-stone-100 shadow-sm flex flex-col items-center text-center hover:border-brand-200 transition-colors"><i class="fas fa-table-tennis text-2xl text-teal-600 mb-3"></i><span class="font-medium text-stone-800 text-sm">Badminton</span></div>
-                    <div class="bg-white rounded-2xl p-5 border border-stone-100 shadow-sm flex flex-col items-center text-center hover:border-brand-200 transition-colors"><i class="fas fa-bicycle text-2xl text-teal-600 mb-3"></i><span class="font-medium text-stone-800 text-sm">Cycling</span></div>
-                    <div class="bg-white rounded-2xl p-5 border border-stone-100 shadow-sm flex flex-col items-center text-center hover:border-brand-200 transition-colors"><i class="fas fa-hiking text-2xl text-teal-600 mb-3"></i><span class="font-medium text-stone-800 text-sm">Trekking</span></div>
+                    <div class="bg-white rounded-2xl p-6 border border-stone-100 shadow-sm flex flex-col items-center text-center hover:border-brand-300 hover:shadow-md transition-all hover:-translate-y-1"><i class="fas fa-microphone-alt text-2xl text-brand-500 mb-3"></i><span class="font-medium text-stone-800 text-sm">Singing</span></div>
+                    <div class="bg-white rounded-2xl p-6 border border-stone-100 shadow-sm flex flex-col items-center text-center hover:border-brand-300 hover:shadow-md transition-all hover:-translate-y-1"><i class="fas fa-drum text-2xl text-brand-500 mb-3"></i><span class="font-medium text-stone-800 text-sm">Playing Tabla</span></div>
+                    <div class="bg-white rounded-2xl p-6 border border-stone-100 shadow-sm flex flex-col items-center text-center hover:border-brand-300 hover:shadow-md transition-all hover:-translate-y-1"><i class="fas fa-book-open text-2xl text-stone-500 mb-3"></i><span class="font-medium text-stone-800 text-sm">Reading</span></div>
+                    <div class="bg-white rounded-2xl p-6 border border-stone-100 shadow-sm flex flex-col items-center text-center hover:border-brand-300 hover:shadow-md transition-all hover:-translate-y-1"><i class="fas fa-pen-fancy text-2xl text-stone-500 mb-3"></i><span class="font-medium text-stone-800 text-sm">Writing Articles</span></div>
+                    <div class="bg-white rounded-2xl p-6 border border-stone-100 shadow-sm flex flex-col items-center text-center hover:border-brand-300 hover:shadow-md transition-all hover:-translate-y-1"><i class="fas fa-language text-2xl text-stone-500 mb-3"></i><span class="font-medium text-stone-800 text-sm">New Languages</span></div>
+                    <div class="bg-white rounded-2xl p-6 border border-stone-100 shadow-sm flex flex-col items-center text-center hover:border-brand-300 hover:shadow-md transition-all hover:-translate-y-1"><i class="fas fa-camera-retro text-2xl text-stone-500 mb-3"></i><span class="font-medium text-stone-800 text-sm">Photography</span></div>
+                    <div class="bg-white rounded-2xl p-6 border border-stone-100 shadow-sm flex flex-col items-center text-center hover:border-brand-300 hover:shadow-md transition-all hover:-translate-y-1"><i class="fas fa-palette text-2xl text-stone-500 mb-3"></i><span class="font-medium text-stone-800 text-sm">Sketching</span></div>
+                    <div class="bg-white rounded-2xl p-6 border border-stone-100 shadow-sm flex flex-col items-center text-center hover:border-brand-300 hover:shadow-md transition-all hover:-translate-y-1"><i class="fas fa-table-tennis text-2xl text-teal-600 mb-3"></i><span class="font-medium text-stone-800 text-sm">Badminton</span></div>
+                    <div class="bg-white rounded-2xl p-6 border border-stone-100 shadow-sm flex flex-col items-center text-center hover:border-brand-300 hover:shadow-md transition-all hover:-translate-y-1"><i class="fas fa-bicycle text-2xl text-teal-600 mb-3"></i><span class="font-medium text-stone-800 text-sm">Cycling</span></div>
+                    <div class="bg-white rounded-2xl p-6 border border-stone-100 shadow-sm flex flex-col items-center text-center hover:border-brand-300 hover:shadow-md transition-all hover:-translate-y-1"><i class="fas fa-hiking text-2xl text-teal-600 mb-3"></i><span class="font-medium text-stone-800 text-sm">Trekking</span></div>
                 </div>
 
                 <h3 class="text-xl font-serif font-bold text-stone-800 mb-6 border-b border-stone-200 pb-2">Personality & Values</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm">
-                        <div class="flex items-center gap-3 mb-3"><i class="fas fa-om text-brand-600 text-xl"></i><h4 class="font-bold text-stone-900">Spiritual & Mindful</h4></div>
-                        <p class="text-sm text-stone-600 leading-relaxed">I place high importance on mental wellness and a balanced lifestyle. During my college years, I served as the President of 'The Lifestyle Club', organizing sessions to promote spirituality through scientific and practical approaches.</p>
+                    <div class="bg-white p-6 sm:p-8 rounded-2xl border border-stone-200 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+                        <div class="absolute -right-4 -bottom-4 text-brand-50 opacity-50"><i class="fas fa-om text-8xl"></i></div>
+                        <div class="flex items-center gap-3 mb-4 relative z-10"><i class="fas fa-om text-brand-600 text-2xl"></i><h4 class="font-bold text-stone-900 text-lg">Spiritual & Mindful</h4></div>
+                        <p class="text-sm text-stone-600 leading-relaxed relative z-10">I place high importance on mental wellness and a balanced lifestyle. During my college years, I served as the President of 'The Lifestyle Club', organizing sessions to promote spirituality through scientific and practical approaches.</p>
                     </div>
-                    <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm">
-                        <div class="flex items-center gap-3 mb-3"><i class="fas fa-hands-helping text-brand-600 text-xl"></i><h4 class="font-bold text-stone-900">Socially Responsible</h4></div>
-                        <p class="text-sm text-stone-600 leading-relaxed">Giving back to the community is deeply fulfilling to me. I have actively managed camps for the National Service Scheme (NSS), including blood donation drives, and volunteered as a transcriber for social awareness foundations.</p>
+                    <div class="bg-white p-6 sm:p-8 rounded-2xl border border-stone-200 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+                        <div class="absolute -right-4 -bottom-4 text-brand-50 opacity-50"><i class="fas fa-hands-helping text-8xl"></i></div>
+                        <div class="flex items-center gap-3 mb-4 relative z-10"><i class="fas fa-hands-helping text-brand-600 text-2xl"></i><h4 class="font-bold text-stone-900 text-lg">Socially Responsible</h4></div>
+                        <p class="text-sm text-stone-600 leading-relaxed relative z-10">Giving back to the community is deeply fulfilling to me. I have actively managed camps for the National Service Scheme (NSS), including blood donation drives, and volunteered as a transcriber for social awareness foundations.</p>
                     </div>
                 </div>
             </div>
@@ -405,63 +407,6 @@
                 menu.classList.add('hidden');
             }
         }
-
-        // Show different sections
-        function showSection(pageId) {
-            // Hide all pages & remove animation classes
-            const pages = document.querySelectorAll('.section-content');
-            pages.forEach(page => {
-                page.classList.remove('active');
-                page.classList.remove('animate-fade-in');
-                const slideUpElements = page.querySelectorAll('.animate-slide-up');
-                slideUpElements.forEach(el => {
-                    el.style.animation = 'none';
-                    el.offsetHeight; 
-                    el.style.animation = null; 
-                });
-            });
-
-            // Show target page
-            const targetPage = document.getElementById(pageId);
-            if(targetPage) {
-                targetPage.classList.add('active');
-                targetPage.classList.add('animate-fade-in');
-            }
-
-            // Update Desktop navigation button styling
-            const navLinks = document.querySelectorAll('.nav-btn');
-            navLinks.forEach(link => {
-                link.classList.remove('bg-brand-700', 'text-white', 'shadow-md');
-                link.classList.add('text-stone-300', 'hover:bg-stone-800', 'hover:text-white');
-            });
-
-            const activeNav = document.getElementById('nav-' + pageId);
-            if(activeNav) {
-                activeNav.classList.remove('text-stone-300', 'hover:bg-stone-800', 'hover:text-white');
-                activeNav.classList.add('bg-brand-700', 'text-white', 'shadow-md');
-            }
-
-            // Update Mobile navigation button styling
-            const mobNavLinks = document.querySelectorAll('.mob-nav-btn');
-            mobNavLinks.forEach(link => {
-                link.classList.remove('bg-brand-700', 'text-white');
-                link.classList.add('text-stone-300', 'hover:bg-stone-800', 'hover:text-white');
-            });
-
-            const activeMobNav = document.getElementById('mob-nav-' + pageId);
-            if(activeMobNav) {
-                activeMobNav.classList.remove('text-stone-300', 'hover:bg-stone-800', 'hover:text-white');
-                activeMobNav.classList.add('bg-brand-700', 'text-white');
-            }
-            
-            // Auto-close mobile menu after clicking
-            document.getElementById('mobile-menu').classList.add('hidden');
-
-            // Scroll to content area slightly below the hero section
-            window.scrollTo({ top: document.querySelector('main').offsetTop - 100, behavior: 'smooth' });
-        }
-        
-        window.history.scrollRestoration = "manual";
     </script>
 </body>
 </html>
